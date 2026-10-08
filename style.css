@@ -2100,16 +2100,56 @@ button{ font:inherit; color:inherit; }
   .letter-inner{ padding:14px 12px; }
   .tap-hint{ font-size:.56rem; letter-spacing:.24em; }
   .cd-sep{ display:none; }
-  .countdown{ gap:10px; }
-  .cd-unit{ min-width:68px; padding:12px 10px; }
-  .btn{ padding:13px 22px; font-size:.6rem; }
+  .countdown{ gap:8px; }
+  .cd-unit{ min-width:66px; padding:12px 8px; }
+
+  /* Alvos de toque confortáveis para o dedo (mínimo 44px).
+     Vale para todos os botões do convite, inclusive os de
+     contato e o "Ver a abertura novamente". */
+  .btn{
+    padding:15px 24px;
+    font-size:.62rem;
+    min-height:46px;
+    justify-content:center;
+  }
+  .btn--small{ padding:14px 22px; min-height:46px; }
+
+  /* Botões de contato ocupam a largura, mais fáceis de acertar */
+  .contact-actions{ flex-direction:column; gap:12px; }
+  .contact-actions .btn{ width:100%; }
+
+  /* Campos do formulário mais altos para digitar no celular */
+  .field input,
+  .field select{ min-height:48px; }
+  .field textarea{ min-height:110px; }
+  .rsvp-form .btn{ padding:17px 24px; min-height:52px; }
 
   /* Evita quebras feias no hero em telas estreitas */
   .hero{ padding:12vh 5vw 15vh; }
   .hero-eyebrow{ font-size:.5rem; letter-spacing:.26em; max-width:88%; line-height:1.9; }
-  .hero-name{ font-size:clamp(1.42rem,7.4vw,2rem); }
-  .hero-invite-text{ font-size:.92rem; }
+  .hero-name{ font-size:clamp(1.34rem,7vw,1.9rem); }
+  .hero-invite-text{ font-size:.9rem; }
   .hero-monogram span{ font-size:2.6rem; }
   .hero-divider{ width:64%; }
   .scroll-cue{ bottom:2.4vh; }
+
+  /* Seções com respiro proporcional */
+  .section{ padding:clamp(56px,9vh,88px) 0; }
+  .sec-title{ font-size:clamp(1.5rem,7vw,2.1rem); }
+  .sec-eyebrow{ font-size:.56rem; letter-spacing:.3em; }
+  .sec-sub{ font-size:.78rem; letter-spacing:.08em; }
+  .wrap{ width:88vw; }
+
+  /* Cardápio e cards com toque mais confortável */
+  .menu-item{ grid-template-columns:40px 1fr; gap:0 13px; }
+  .menu-icon{ width:40px; height:40px; }
+  .menu-icon svg{ width:20px; height:20px; }
+  .d-card{ padding:26px 18px; }
+
+  /* Linha do tempo mais compacta */
+  .tl-item{ grid-template-columns:22px 1fr; gap:0 12px; }
+  .tl-time{ font-size:1rem; }
+
+  /* Rodapé */
+  .footer{ padding:52px 0 44px; }
 }
