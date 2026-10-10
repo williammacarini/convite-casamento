@@ -22,7 +22,7 @@
     endereco: 'Ribeirão da Ilha, Florianópolis - SC',
     // Opções de prato principal para escolha prévia no RSVP
     pratos: [
-      'Spaghetti nero ai frutti di mare',
+      'Risoto Bruxaria',
       'Parmegiana de mignon',
       'Parmegiana de frango'
     ],
