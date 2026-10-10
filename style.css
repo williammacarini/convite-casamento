@@ -970,16 +970,19 @@ button{ font:inherit; color:inherit; }
   animation:flor-in 1.7s cubic-bezier(.22,.61,.36,1) forwards;
 }
 @keyframes flor-in{
-  from{ opacity:0; transform:scale(.94); }
-  to  { opacity:1; transform:none; }
+  from{ opacity:0; scale:.94; }
+  to  { opacity:1; scale:1; }
 }
+/* As flores contornam os quatro cantos por ESPELHAMENTO
+   (a imagem tem o ramo no canto superior esquerdo).
+   Rotacionar deslocaria a flor para o lugar errado. */
 .flor--tl{ top:-16px; left:-24px; }
-.flor--tr{ top:-30px; right:-34px; transform:rotate(90deg); transform-origin:top right;
-           width:clamp(120px,16vw,230px); animation-delay:.2s; }
-.flor--bl{ bottom:-30px; left:-38px; transform:rotate(-90deg); transform-origin:bottom left;
-           width:clamp(120px,16vw,230px); animation-delay:.35s; }
-.flor--br{ bottom:-20px; right:-28px; transform:rotate(180deg); transform-origin:bottom right;
-           animation-delay:.5s; }
+.flor--tr{ top:-16px; right:-24px;
+           transform:scaleX(-1); animation-delay:.2s; }
+.flor--bl{ bottom:-16px; left:-24px;
+           transform:scaleY(-1); animation-delay:.35s; }
+.flor--br{ bottom:-16px; right:-24px;
+           transform:scale(-1,-1); animation-delay:.5s; }
 
 .hero-content{
   position:relative;
@@ -2193,11 +2196,9 @@ button{ font:inherit; color:inherit; }
 }
 /* Alterna os cantos para dar ritmo sem poluir */
 .flor-sec--tl{ top:-14px; left:-22px; }
-.flor-sec--tr{ top:-18px; right:-26px; transform:rotate(90deg); transform-origin:top right;
-               width:clamp(105px,14vw,205px); }
-.flor-sec--bl{ bottom:-22px; left:-28px; transform:rotate(-90deg); transform-origin:bottom left;
-               width:clamp(105px,14vw,205px); }
-.flor-sec--br{ bottom:-16px; right:-24px; transform:rotate(180deg); transform-origin:bottom right; }
+.flor-sec--tr{ top:-14px; right:-22px; transform:scaleX(-1); }
+.flor-sec--bl{ bottom:-14px; left:-22px; transform:scaleY(-1); }
+.flor-sec--br{ bottom:-14px; right:-22px; transform:scale(-1,-1); }
 
 /* O conteúdo fica acima das flores */
 .section > .wrap{ position:relative; z-index:1; }
@@ -2218,15 +2219,12 @@ button{ font:inherit; color:inherit; }
   animation:flor-in 1.8s cubic-bezier(.22,.61,.36,1) .3s forwards;
 }
 .scene--envelope .flor--tl{ top:-14px; left:-22px; }
-.scene--envelope .flor--tr{ top:-26px; right:-30px;
-  transform:rotate(90deg); transform-origin:top right;
-  width:clamp(110px,15vw,215px); animation-delay:.45s; }
-.scene--envelope .flor--bl{ bottom:-28px; left:-34px;
-  transform:rotate(-90deg); transform-origin:bottom left;
-  width:clamp(110px,15vw,215px); animation-delay:.6s; }
-.scene--envelope .flor--br{ bottom:-18px; right:-26px;
-  transform:rotate(180deg); transform-origin:bottom right;
-  animation-delay:.75s; }
+.scene--envelope .flor--tr{ top:-14px; right:-22px;
+  transform:scaleX(-1); animation-delay:.45s; }
+.scene--envelope .flor--bl{ bottom:-14px; left:-22px;
+  transform:scaleY(-1); animation-delay:.6s; }
+.scene--envelope .flor--br{ bottom:-14px; right:-22px;
+  transform:scale(-1,-1); animation-delay:.75s; }
 
 /* Somem junto com a abertura do envelope */
 .scene--envelope.is-gone .flor{
