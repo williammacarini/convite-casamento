@@ -80,7 +80,7 @@ ol, ul { padding: 0; list-style: none; }
 .hero-texto { font-family: var(--serif); font-size: 19px; line-height: 1.75; margin-top: 22px; }
 .hero-texto--destaque { font-style: italic; color: var(--rose); font-size: 18px; margin-top: 12px; }
 
-.passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; text-align: left; }
+.passos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 34px; text-align: left; }
 .passos li { display: grid; gap: 4px; background: #fffdf8; border: 1px solid #e6dcc6; border-radius: 12px; padding: 18px 18px 20px; font-size: 12px; line-height: 1.7; }
 .passo-num {
   width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%;
@@ -135,6 +135,8 @@ html:not(.js) .filtros { display: none; }
 .mimo--premium { background: #fdf9ff; }
 .mimo-topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .mimo-icone { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; font-size: 25px; background: #f1e7d3; }
+.mimo-svg { width: 31px; height: 31px; fill: none; stroke: var(--green); stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .mimo-icone--comidas { background: #fbe4d2; }
 .mimo-icone--viagens { background: #dcecf7; }
 .mimo-icone--casa { background: #e3f0d8; }

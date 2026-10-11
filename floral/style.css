@@ -194,7 +194,7 @@ cite { display: block; font-family: var(--sans); text-transform: uppercase; font
 .d-link { margin-top: 11px !important; }
 .d-link a { color: var(--rose); font-size: 11px; text-underline-offset: 4px; }
 .section--mimos { background: #f0f1e7; }
-.mimos-qr { display: flex; align-items: center; gap: 26px; margin-top: 32px; text-align: left; }
+.mimos-qr { display: flex; align-items: center; justify-content: center; gap: 26px; max-width: 545px; margin: 32px auto 0; text-align: left; }
 .mimos-qr img { width: 168px; height: 168px; padding: 9px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; }
 .mimos-qr-texto { font-size: 11px; line-height: 2; }
 .mimos-nota { font-size: 11px; color: var(--muted); margin-top: 22px; line-height: 1.9; }

@@ -49,12 +49,12 @@
       botoes.forEach(function (botao) {
         var ehCamila = botao.getAttribute('data-destino') === 'camila';
         botao.href = linkWhats(ehCamila ? CONFIG.whatsAlternativo : CONFIG.whatsMimos, texto);
-        botao.setAttribute('aria-label', 'Presentear ' + nome + ' por ' + reais(valor) +
-          ' no WhatsApp ' + (ehCamila ? 'da Camila' : 'do William'));
+        botao.setAttribute('aria-label', 'Chamar ' + (ehCamila ? 'a Camila' : 'o William') +
+          ' no WhatsApp para presentear ' + nome + ' por ' + reais(valor));
         botao.target = '_blank';
         botao.rel = 'noopener noreferrer';
       });
-      if (principal) principal.textContent = digitado > 0 ? 'Presentear por ' + reais(valor) : 'Presentear no WhatsApp';
+      if (principal) principal.textContent = digitado > 0 ? 'Chamar o William · ' + reais(valor) : 'Chamar o William';
     }
 
     alternar.addEventListener('click', function () {
@@ -106,14 +106,14 @@
 
     vazio.hidden = visiveis > 0;
     if (!visiveis) {
-      status.textContent = 'Nenhum mimo encontrado com esse filtro.';
+      status.textContent = 'Nenhum presente encontrado com esse filtro.';
     } else if (filtro === 'todos' && !termo) {
-      status.textContent = 'Mostrando os ' + total + ' mimos.';
+      status.textContent = 'Mostrando os ' + total + ' presentes.';
     } else {
-      var rotulo = filtro === 'todos' ? 'todos os mimos'
+      var rotulo = filtro === 'todos' ? 'todos os presentes'
         : filtro === 'favoritos' ? 'os mais pedidos'
         : 'a categoria ' + chips.filter(function (chip) { return chip.getAttribute('data-filtro') === filtro; })[0].textContent.trim();
-      status.textContent = 'Mostrando ' + visiveis + ' de ' + total + ' mimos (' + rotulo + ').';
+      status.textContent = 'Mostrando ' + visiveis + ' de ' + total + ' presentes (' + rotulo + ').';
     }
   }
 
