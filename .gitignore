@@ -25,3 +25,7 @@ floral/previas/*
 !floral/previas/principal-celular.png
 !floral/previas/alternativo-celular.png
 !floral/previas/convite-celular.png
+
+# Loja de mimos: previas e script de verificacao ficam locais
+presentes/previas/
+presentes/validar*.mjs

@@ -38,6 +38,8 @@ A data foi conferida no HTML, configuração e agenda do principal. Um trecho an
 - O versículo de Mateus 19:6 aparece sozinho depois das fotos, sem o bloco de data.
 - O versículo de Colossenses deu lugar ao convite: **Você é nosso convidado para celebrar esse dia conosco e continuar essa caminhada ao nosso lado.**
 - Nenhum travessão no convite: os separadores são o ponto médio, a vírgula ou o ponto.
+- A seção **Loja Oficial de Mimos dos Noivos** (`#mimos`) reúne o QR Code, o botão para
+  `../presentes/` e o aviso de que nada é cobrado no site.
 - A aba do envelope tem uma única superfície. O selo sai, a aba abre e uma única carta sobe atrás dos bolsos. O convidado toca na carta para entrar.
 - Cliques repetidos não reiniciam a abertura. Pular e repetir cancelam os temporizadores anteriores.
 - Botão para pular, navegação pelo teclado e preferência por movimento reduzido. Sem música.
