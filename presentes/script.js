@@ -32,11 +32,12 @@
 
   var cartoes = $$('.mimo');
 
-  /* ---------- Cada mimo: link pronto, valor opcional e mensagem ---------- */
+  /* ---------- Cada mimo: links prontos, valor opcional e mensagem ---------- */
   cartoes.forEach(function (cartao) {
     var nome = cartao.getAttribute('data-nome');
     var sugerido = Number(cartao.getAttribute('data-valor'));
-    var botao = $('.btn--mimo', cartao);
+    var botoes = $$('.mimo-acoes [data-destino]', cartao);
+    var principal = $('.btn--mimo', cartao);
     var campo = $('.mimo-campo', cartao);
     var entrada = $('input', campo);
     var alternar = $('.mimo-outro', cartao);
@@ -44,13 +45,17 @@
     function atualizar() {
       var digitado = Number(entrada.value);
       var valor = digitado > 0 ? digitado : sugerido;
-      botao.href = linkWhats(CONFIG.whatsMimos, mensagem(nome, valor, sugerido));
-      botao.setAttribute('aria-label', 'Presentear ' + nome + ' por ' + reais(valor) + ' no WhatsApp');
-      botao.textContent = digitado > 0 ? 'Presentear por ' + reais(valor) : 'Presentear no WhatsApp';
+      var texto = mensagem(nome, valor, sugerido);
+      botoes.forEach(function (botao) {
+        var ehCamila = botao.getAttribute('data-destino') === 'camila';
+        botao.href = linkWhats(ehCamila ? CONFIG.whatsAlternativo : CONFIG.whatsMimos, texto);
+        botao.setAttribute('aria-label', 'Presentear ' + nome + ' por ' + reais(valor) +
+          ' no WhatsApp ' + (ehCamila ? 'da Camila' : 'do William'));
+        botao.target = '_blank';
+        botao.rel = 'noopener noreferrer';
+      });
+      if (principal) principal.textContent = digitado > 0 ? 'Presentear por ' + reais(valor) : 'Presentear no WhatsApp';
     }
-
-    botao.target = '_blank';
-    botao.rel = 'noopener noreferrer';
 
     alternar.addEventListener('click', function () {
       var aberto = !campo.hidden;
@@ -127,7 +132,10 @@
   aplicar();
 
   /* ---------- Contatos e link do convite ---------- */
-  var alternativo = $('#waAlt');
-  if (alternativo) alternativo.href = 'https://wa.me/' + CONFIG.whatsAlternativo;
+  var contatos = [['#waAlt', CONFIG.whatsAlternativo], ['#waWill', CONFIG.whatsMimos]];
+  contatos.forEach(function (par) {
+    var link = $(par[0]);
+    if (link) link.href = 'https://wa.me/' + par[1];
+  });
   $$('[href="../floral/"]').forEach(function (link) { link.href = CONFIG.convite; });
 })();

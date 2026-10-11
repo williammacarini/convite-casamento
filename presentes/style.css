@@ -158,6 +158,8 @@ html:not(.js) .filtros { display: none; }
 }
 .btn--mimo { background: var(--green); color: var(--paper); }
 .btn--mimo:hover { background: #18382d; transform: translateY(-1px); }
+.btn--mimo-alt { min-height: 42px; padding: 9px 16px; font-size: 11px; border-color: #b9c8a5; color: var(--green); background: #fffdf8; }
+.btn--mimo-alt:hover { background: #eef3e6; }
 .btn--texto { border: 0; background: transparent; color: var(--muted); font-size: 11px; min-height: 34px; padding: 4px; text-decoration: underline; text-underline-offset: 4px; }
 .btn--texto:hover { color: var(--rose); }
 .btn--convite { background: var(--green); color: var(--paper); }

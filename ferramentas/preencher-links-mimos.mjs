@@ -13,7 +13,9 @@ const arquivoHtml = path.join(raiz, 'presentes/index.html');
 const arquivoJs = path.join(raiz, 'presentes/script.js');
 
 const js = fs.readFileSync(arquivoJs, 'utf8');
-const numero = js.match(/whatsMimos:\s*'(\d+)'/)[1];
+const numeroWilliam = js.match(/whatsMimos:\s*'(\d+)'/)[1];
+const numeroCamila = js.match(/whatsAlternativo:\s*'(\d+)'/)[1];
+const numeros = { william: numeroWilliam, camila: numeroCamila };
 const fecho = js.match(/fecho:\s*'([^']+)'/)[1];
 const reais = valor => 'R$ ' + Number(valor).toLocaleString('pt-BR');
 
@@ -25,20 +27,27 @@ function mensagem(nome, valor, sugerido) {
 }
 
 let html = fs.readFileSync(arquivoHtml, 'utf8');
-let total = 0;
+let cartoes = 0;
+let links = 0;
 
 html = html.replace(
-  /<article class="mimo[^"]*" data-categoria="[^"]*" data-nome="([^"]+)" data-valor="(\d+)"[^>]*>[\s\S]*?<a class="btn btn--mimo" data-wa href="[^"]*"/g,
-  (trecho, nome, valor) => {
-    total++;
-    const link = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(mensagem(nome, valor, valor));
-    return trecho.replace(/href="[^"]*"$/, `href="${link.replace(/&/g, '&amp;')}"`);
+  /<article class="mimo[^"]*" data-categoria="[^"]*" data-nome="([^"]+)" data-valor="(\d+)"[\s\S]*?<\/article>/g,
+  (bloco, nome, valor) => {
+    cartoes++;
+    return bloco.replace(
+      /(<a class="btn btn--mimo[^"]*" data-wa data-destino="(william|camila)" href=")[^"]*(")/g,
+      (trecho, inicio, destino, fim) => {
+        links++;
+        const url = 'https://wa.me/' + numeros[destino] + '?text=' + encodeURIComponent(mensagem(nome, valor, valor));
+        return inicio + url.replace(/&/g, '&amp;') + fim;
+      }
+    );
   }
 );
 
 fs.writeFileSync(arquivoHtml, html);
-console.log(`${total} links de WhatsApp gravados no HTML (número ${numero}).`);
-if (total === 0) {
-  console.error('Nenhum mimo encontrado: confira o formato dos cards em presentes/index.html.');
+console.log(`${links} links gravados em ${cartoes} mimos (William ${numeroWilliam}, Camila ${numeroCamila}).`);
+if (cartoes === 0 || links !== cartoes * 2) {
+  console.error('Esperava dois links por mimo: confira os cards em presentes/index.html.');
   process.exit(1);
 }
