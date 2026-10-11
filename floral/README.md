@@ -22,8 +22,8 @@ Fontes, fotos e ilustrações são locais. Os links de mapa e WhatsApp precisam 
 ## Dados do casamento
 
 - **Camila Cristina Goncalves e William Prussak Macarini**.
-- **24 de novembro de 2026**, cerimônia às **16h30** e jantar a partir das **18h00**.
-- **Porto a Porto Restaurante**, Ribeirão da Ilha, Florianópolis — SC.
+- **24 de novembro de 2026**, cerimônia às **16h00** e jantar a partir das **18h00**.
+- **Porto a Porto Restaurante**, Ribeirão da Ilha, Florianópolis, SC.
 - Confirmação até **24 de outubro de 2026**.
 - Mesmos textos da história, versículos, fotos reais, programação, traje, presentes, estacionamento, agenda e contatos do convite principal.
 
@@ -33,7 +33,11 @@ A data foi conferida no HTML, configuração e agenda do principal. Um trecho an
 
 - Textura de papel nas superfícies claras, incluindo abertura, carta, molduras e formulário.
 - Foto maior na capa, nomes juntos e uma única contagem regressiva sob **Save the Date**.
-- As duas fotos da história mantêm a composição diagonal; os arranjos acompanham os cantos das molduras.
+- As duas fotos da história mantêm a composição diagonal, somente com as molduras, sem flores.
+- Na capa do celular, a frase **Com a bênção de Deus** começa 20 px abaixo do topo, livre das flores do canto.
+- O versículo de Mateus 19:6 aparece sozinho depois das fotos, sem o bloco de data.
+- O versículo de Colossenses deu lugar ao convite: **Você é nosso convidado para celebrar esse dia conosco e continuar essa caminhada ao nosso lado.**
+- Nenhum travessão no convite: os separadores são o ponto médio, a vírgula ou o ponto.
 - A aba do envelope tem uma única superfície. O selo sai, a aba abre e uma única carta sobe atrás dos bolsos. O convidado toca na carta para entrar.
 - Cliques repetidos não reiniciam a abertura. Pular e repetir cancelam os temporizadores anteriores.
 - Botão para pular, navegação pelo teclado e preferência por movimento reduzido. Sem música.

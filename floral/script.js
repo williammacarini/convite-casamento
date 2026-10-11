@@ -9,7 +9,7 @@
     casal: 'Camila & William',
     casalCompleto: 'Camila Cristina Goncalves e William Prussak Macarini',
     // Data e hora da cerimônia (horário local de Brasília, UTC-3)
-    dataISO: '2026-11-24T16:30:00-03:00',
+    dataISO: '2026-11-24T16:00:00-03:00',
     local: 'Porto a Porto Restaurante',
     endereco: 'Ribeirão da Ilha, Florianópolis - SC',
     // Opções de prato principal para escolha prévia no RSVP
@@ -185,7 +185,7 @@
       select.id = 'prato-' + i;
       select.name = 'prato-' + i;
       select.className = 'prato-select';
-      select.setAttribute('aria-label', 'Prato principal — ' + label.textContent);
+      select.setAttribute('aria-label', 'Prato principal: ' + label.textContent);
       select.required = willAttend();
       var placeholder = new Option('Selecione o prato', '');
       select.add(placeholder);
