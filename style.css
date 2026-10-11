@@ -2297,3 +2297,167 @@ button{ font:inherit; color:inherit; }
   text-transform:uppercase;
   color:var(--lilas-forte);
 }
+
+
+/* =========================================================
+   NOSSA HISTÓRIA (seção "Nós dois")
+   Textos de apresentação, bloco com data + versículo ao lado
+   da foto. Design fluido, sem formas quadradas.
+   ========================================================= */
+
+.historia{
+  max-width:720px;
+  margin:0 auto clamp(38px,6vh,68px);
+  text-align:center;
+}
+
+.historia-titulo{
+  margin:0;
+  font-family:var(--f-script);
+  font-size:clamp(1.6rem,4.6vw,2.6rem);
+  line-height:1.45;
+  color:var(--rosa-forte);
+}
+
+.historia .ornament-line{
+  width:min(56%,180px);
+  margin:clamp(14px,2.4vh,24px) auto;
+  color:var(--lilas);
+}
+
+.historia-texto{
+  margin:0;
+  font-family:var(--f-serif);
+  font-size:clamp(.96rem,2.1vw,1.18rem);
+  font-weight:300;
+  line-height:2;
+  letter-spacing:.02em;
+  color:var(--texto-suave);
+}
+
+/* O segundo texto vem como um respiro, com um filete delicado */
+.historia--compromisso{
+  position:relative;
+  padding-top:clamp(30px,4.6vh,52px);
+}
+.historia--compromisso::before{
+  content:'';
+  position:absolute;
+  top:0; left:50%;
+  transform:translateX(-50%);
+  width:min(38%,120px);
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(185,167,217,.6) 50%, transparent);
+}
+
+/* ---------- BLOCO: data + versículo | foto ---------- */
+
+.duo{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:clamp(26px,5vw,64px);
+  margin:clamp(44px,7vh,80px) 0;
+}
+@media (max-width:820px){
+  .duo{ grid-template-columns:1fr; gap:clamp(28px,5vh,44px); }
+}
+
+.duo-texto{
+  display:flex;
+  flex-direction:column;
+  gap:clamp(30px,5vh,54px);
+}
+@media (max-width:820px){
+  .duo-texto{ text-align:center; }
+}
+
+/* Data e hora */
+.duo-eyebrow{
+  display:block;
+  margin-bottom:12px;
+  font-size:.58rem;
+  letter-spacing:.4em;
+  text-transform:uppercase;
+  color:var(--lilas-forte);
+  font-weight:600;
+}
+.duo-dia{
+  margin:0;
+  font-family:var(--f-serif);
+  font-size:clamp(1.5rem,4vw,2.3rem);
+  font-weight:400;
+  letter-spacing:.03em;
+  line-height:1.25;
+  color:var(--texto);
+}
+.duo-hora{
+  margin:10px 0 0;
+  font-family:var(--f-serif);
+  font-size:clamp(1.05rem,2.5vw,1.42rem);
+  font-style:italic;
+  color:var(--rosa-forte);
+}
+.duo-local{
+  margin:8px 0 0;
+  font-size:clamp(.58rem,1.5vw,.68rem);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--texto-claro);
+}
+
+/* Versículo de Mateus */
+.duo-versiculo{
+  margin:0;
+  padding-left:clamp(16px,2.4vw,24px);
+  border-left:1px solid rgba(233,139,174,.45);
+  font-family:var(--f-serif);
+  font-size:clamp(.94rem,2vw,1.14rem);
+  font-style:italic;
+  font-weight:300;
+  line-height:1.95;
+  letter-spacing:.02em;
+  color:var(--texto-suave);
+  text-align:left;
+}
+@media (max-width:820px){
+  .duo-versiculo{
+    text-align:center;
+    padding-left:0;
+    border-left:0;
+    padding-top:clamp(18px,3vh,26px);
+    border-top:1px solid rgba(233,139,174,.35);
+  }
+}
+.duo-versiculo cite{
+  display:block;
+  margin-top:12px;
+  font-family:var(--f-sans);
+  font-style:normal;
+  font-size:.58rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--lilas-forte);
+}
+
+/* Foto do bloco */
+.duo-foto{
+  position:relative;
+  margin:0;
+  overflow:hidden;
+  border-radius:3px;
+  box-shadow:var(--shadow-md);
+  background:var(--creme);
+  height:clamp(340px,54vh,560px);
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path 1.3s cubic-bezier(.22,.61,.36,1);
+}
+.duo-foto.is-revealed{ clip-path:inset(0 0 0 0); }
+.duo-foto img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:50% 50%;
+  transition:transform 1.4s cubic-bezier(.22,.61,.36,1), filter .6s ease;
+  filter:saturate(.98) contrast(1.02);
+}
+.duo-foto:hover img{ transform:scale(1.04); filter:saturate(1.05) contrast(1.04); }

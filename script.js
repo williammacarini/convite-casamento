@@ -274,7 +274,7 @@
 
       // Reseta o estado do hero para a animação de entrada rodar de novo
       $$('.reveal').forEach(function (el) { el.classList.remove('is-visible'); });
-      $$('.venue-figure, .casal-figure').forEach(function (el) { el.classList.remove('is-revealed'); });
+      $$('.venue-figure, .casal-figure, .duo-foto').forEach(function (el) { el.classList.remove('is-revealed'); });
 
       setTimeout(abrirEnvelope, reduceMotion ? 50 : 950);
     });
@@ -294,7 +294,7 @@
     var atraso = Math.min(idx, 4) * 90;
 
     setTimeout(function () {
-      el.classList.add(el.classList.contains('venue-figure') || el.classList.contains('casal-figure')
+      el.classList.add(el.classList.contains('venue-figure') || el.classList.contains('casal-figure') || el.classList.contains('duo-foto')
         ? 'is-revealed'
         : 'is-visible');
     }, atraso);
@@ -315,7 +315,7 @@
       if (r.top < vh * 0.94 && r.bottom > -60) revelarEl(el);
     });
 
-    $$('.venue-figure, .casal-figure').forEach(function (el) {
+    $$('.venue-figure, .casal-figure, .duo-foto').forEach(function (el) {
       if (el.classList.contains('is-revealed')) return;
       var r = el.getBoundingClientRect();
       if (r.top < vh * 0.94 && r.bottom > -60) revelarEl(el);
@@ -328,7 +328,7 @@
    */
   function revelarTudoPendente() {
     $$('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
-    $$('.venue-figure, .casal-figure').forEach(function (el) { el.classList.add('is-revealed'); });
+    $$('.venue-figure, .casal-figure, .duo-foto').forEach(function (el) { el.classList.add('is-revealed'); });
   }
 
   // Revela conforme o usuário rola (com rAF para não travar)
