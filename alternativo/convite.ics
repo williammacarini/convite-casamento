@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Convite Casamento//Camila e William//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:casamento-camila-william-20261124@convite
+DTSTAMP:20260101T120000Z
+DTSTART:20261124T193000Z
+DTEND:20261125T020000Z
+SUMMARY:Casamento de Camila & William
+DESCRIPTION:Cerimonia as 16h30 e jantar a partir das 18h00.\nPorto a Porto Restaurante - Ribeirao da Ilha, Florianopolis - SC.\n\nEntrada, pratos principais e doces (Meu Confeito) estao incluidas na recepcao.\nBebidas serao cobradas a parte.
+LOCATION:Porto a Porto Restaurante\, Ribeirao da Ilha\, Florianopolis - SC
+GEO:-27.6844;-48.5511
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Casamento de Camila & William amanha! Cerimonia as 16h30.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Casamento de Camila & William as 16h30.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

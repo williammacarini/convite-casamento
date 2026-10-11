@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Camila &amp; William — Convite de Casamento</title>
+<meta name="description" content="Camila Cristina Goncalves e William Prussak Macarini convidam você para a celebração do casamento. Porto a Porto Restaurante — Ribeirão da Ilha, Florianópolis.">
+<meta name="theme-color" content="#D6336C">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23D6336C'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' fill='%23fff' text-anchor='middle'%3EC%26W%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     CENA 1 — O ENVELOPE ROSA COM FORRO FLORAL
+     ============================================================ -->
+<section id="cenaEnvelope" class="cena-envelope">
+
+  <div class="palco">
+
+    <p class="palco-frase">Você é nosso convidado especial</p>
+
+    <div class="envelope" id="envelope" role="button" tabindex="0"
+         aria-label="Toque no selo para abrir o convite">
+
+      <div class="env-fundo"></div>
+
+      <!-- Cartão que sai do envelope -->
+      <div class="cartao" id="cartao">
+        <div class="cartao-moldura">
+          <p class="cartao-eyebrow">Convite de Casamento</p>
+          <p class="cartao-mono">C <span>&amp;</span> W</p>
+          <h1 class="cartao-nomes">Camila <span>&amp;</span> William</h1>
+          <div class="filete"><span></span><i>✦</i><span></span></div>
+          <p class="cartao-data">24 de Novembro de 2026</p>
+          <p class="cartao-local">Porto a Porto Restaurante &middot; Ribeirão da Ilha</p>
+          <button class="btn-abrir" id="btnAbrir" type="button">Abrir o convite</button>
+        </div>
+      </div>
+
+      <!-- Forro floral (aparece quando a aba abre) -->
+      <div class="env-aba" id="envAba">
+        <div class="aba-face aba-externa"></div>
+        <div class="aba-face aba-forro">
+          <div class="forro-floral"></div>
+          <p class="forro-mono">C <span>&amp;</span> W</p>
+        </div>
+      </div>
+
+      <!-- Frente do envelope -->
+      <div class="env-frente">
+        <span class="dobra dobra-esq"></span>
+        <span class="dobra dobra-dir"></span>
+        <span class="dobra dobra-baixo"></span>
+      </div>
+
+      <!-- Selo de cera -->
+      <div class="selo" id="selo" aria-hidden="true">
+        <span class="selo-borda"></span>
+        <span class="selo-texto">C&amp;W</span>
+      </div>
+
+      <div class="env-clique" id="envClique" aria-hidden="true"></div>
+    </div>
+
+    <p class="dica" id="dica">
+      <span class="dica-pulso" aria-hidden="true"></span>
+      <span id="dicaTexto">Toque no selo para abrir</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CENA 2 — O CONVITE
+     ============================================================ -->
+<main id="convite" class="convite" aria-hidden="true">
+
+  <!-- ============ CAPA ============ -->
+  <header class="capa">
+    <div class="capa-flores" aria-hidden="true">
+      <span class="flor flor--tl"></span>
+      <span class="flor flor--tr"></span>
+      <span class="flor flor--bl"></span>
+      <span class="flor flor--br"></span>
+    </div>
+
+    <div class="capa-conteudo">
+      <p class="capa-eyebrow">Com a bênção de Deus</p>
+
+      <div class="capa-moldura-foto">
+        <span class="moldura-flor moldura-flor--tl" aria-hidden="true"></span>
+        <span class="moldura-flor moldura-flor--br" aria-hidden="true"></span>
+        <img src="../imagens/nos-dois.jpg" alt="Camila e William ao entardecer">
+      </div>
+
+      <div class="capa-mono">
+        <span class="ano">20</span>
+        <span class="oval"><i>C</i><i>W</i></span>
+        <span class="ano">26</span>
+      </div>
+
+      <h1 class="capa-nomes">Camila <span>&amp;</span> William</h1>
+
+      <div class="filete"><span></span><i>✦</i><span></span></div>
+
+      <p class="capa-save">Save the Date</p>
+      <p class="capa-data">24 de Novembro de 2026</p>
+      <p class="capa-hora">Cerimônia às 16h30</p>
+    </div>
+
+    <div class="capa-role" aria-hidden="true">
+      <span class="role-linha"></span>
+      <span class="role-palavra">role</span>
+    </div>
+  </header>
+
+
+  <!-- ============ CONTAGEM REGRESSIVA ============ -->
+  <section class="bloco bloco--contagem">
+    <div class="limite">
+      <p class="eyebrow">Contagem regressiva</p>
+      <h2 class="titulo-script">Falta pouco</h2>
+
+      <div class="contagem" id="contagem" role="timer" aria-live="polite">
+        <div class="cg"><span class="cg-num" id="cgDias">--</span><span class="cg-rot">Dias</span></div>
+        <div class="cg"><span class="cg-num" id="cgHoras">--</span><span class="cg-rot">Horas</span></div>
+        <div class="cg"><span class="cg-num" id="cgMin">--</span><span class="cg-rot">Min</span></div>
+        <div class="cg"><span class="cg-num" id="cgSeg">--</span><span class="cg-rot">Seg</span></div>
+      </div>
+
+      <div class="acoes">
+        <a class="btn btn--rosa" href="convite.ics" download="Convite-Camila-e-William.ics">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm12 8v10H5V10h14z" fill="currentColor"/></svg>
+          Adicionar à agenda
+        </a>
+        <a class="btn btn--contorno" id="btnMapa" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Porto%20a%20Porto%20Restaurante%2C%20Ribeir%C3%A3o%20da%20Ilha%2C%20Florian%C3%B3polis%20-%20SC">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+          Ver endereço
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ VERSÍCULO ============ -->
+  <section class="bloco bloco--versiculo">
+    <span class="flor-sec flor-sec--tr" aria-hidden="true"></span>
+    <span class="flor-sec flor-sec--bl" aria-hidden="true"></span>
+
+    <div class="limite limite--estreito">
+      <div class="aspas" aria-hidden="true">&ldquo;</div>
+      <blockquote class="versiculo">
+        Assim não são mais dois, mas uma só carne.<br>
+        Portanto, o que Deus uniu, ninguém separe.
+        <cite>Mateus 19:6</cite>
+      </blockquote>
+    </div>
+  </section>
+
+
+  <!-- ============ NOSSA HISTÓRIA ============ -->
+  <section class="bloco bloco--historia">
+    <div class="limite">
+      <p class="eyebrow">Nossa trajetória</p>
+      <h2 class="titulo-script">Nossa história</h2>
+
+      <p class="texto">
+        Esse é o momento em que decidimos transformar a nossa história, convidando
+        Cristo para ser o nosso par perfeito e pedindo que as bênçãos de Deus se
+        derramem sobre a nossa união. Até aqui, seis anos de união e a graça de Deus
+        nos acompanhou.
+      </p>
+
+      <!-- Colagem de fotos -->
+      <div class="colagem">
+        <figure class="polaroid polaroid--1">
+          <img src="../imagens/nos-dois.jpg" alt="Camila e William ao entardecer">
+        </figure>
+        <figure class="polaroid polaroid--2">
+          <img src="../imagens/mirante.jpg" alt="Camila e William no mirante">
+        </figure>
+        <figure class="polaroid polaroid--3">
+          <img src="../imagens/salao.jpg" alt="Salão do Porto a Porto Restaurante">
+        </figure>
+        <span class="colagem-selo" aria-hidden="true">C&amp;W</span>
+      </div>
+
+      <p class="texto texto--final">
+        Daqui em diante, unimo-nos em uma aliança, nos tornando uma só carne
+        e nos amando como Cristo também amou a Igreja.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============ CERIMÔNIA ============ -->
+  <section class="bloco bloco--cerimonia">
+    <div class="limite">
+      <article class="cartao-info">
+        <span class="cartao-flor cartao-flor--tl" aria-hidden="true"></span>
+        <span class="cartao-flor cartao-flor--br" aria-hidden="true"></span>
+
+        <p class="eyebrow">Cerimônia</p>
+        <h2 class="titulo-script">O grande dia</h2>
+
+        <div class="info-icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+
+        <p class="info-destaque">24 de Novembro de 2026</p>
+        <p class="info-linha">Cerimônia às <strong>16h30</strong> — recomendamos chegar com antecedência</p>
+        <p class="info-linha">Jantar a partir das <strong>18h00</strong></p>
+
+        <div class="filete"><span></span><i>✦</i><span></span></div>
+
+        <p class="info-local">Porto a Porto Restaurante</p>
+        <p class="info-end">Ribeirão da Ilha &middot; Florianópolis — SC</p>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ============ RECEPÇÃO ============ -->
+  <section class="bloco bloco--recepcao">
+    <span class="flor-sec flor-sec--tl" aria-hidden="true"></span>
+
+    <div class="limite">
+      <p class="eyebrow">Cuidado em cada detalhe</p>
+      <h2 class="titulo-script">Nossa recepção</h2>
+
+      <p class="texto">
+        Escolhemos um menu especial para compartilhar esse momento com vocês.
+      </p>
+
+      <div class="menu-grade">
+        <article class="menu-item">
+          <h3>Entradas</h3>
+          <ul>
+            <li>Pastel de carne, queijo e camarão</li>
+            <li>Parmesão e provolone</li>
+            <li>Gorgonzola</li>
+            <li>Salame italiano com pães artesanais</li>
+            <li>Pastinha de salmão, azeitona e frango</li>
+          </ul>
+        </article>
+
+        <article class="menu-item">
+          <h3>Pratos principais</h3>
+          <ul>
+            <li><strong>Risoto Bruxaria</strong><span>Camarão, ostra, polvo e lula grelhados, cogumelos frescos e gorgonzola</span></li>
+            <li><strong>Parmegiana de mignon</strong></li>
+            <li><strong>Parmegiana de frango</strong></li>
+          </ul>
+        </article>
+
+        <article class="menu-item">
+          <h3>Mesa de Bolos e Doces</h3>
+          <p class="menu-nota">Preparados com carinho pela <strong>Meu Confeito</strong></p>
+        </article>
+      </div>
+
+      <p class="aviso">
+        O jantar e a mesa de doces são um <strong>carinho nosso por você</strong>.<br>
+        As bebidas serão cobradas à parte pelo restaurante.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============ LOCALIZAÇÃO ============ -->
+  <section class="bloco bloco--local">
+    <div class="limite">
+      <p class="eyebrow">O cenário</p>
+      <h2 class="titulo-script">Onde vamos celebrar</h2>
+
+      <figure class="foto-larga">
+        <span class="moldura-flor moldura-flor--tl" aria-hidden="true"></span>
+        <span class="moldura-flor moldura-flor--br" aria-hidden="true"></span>
+        <img src="../imagens/cerimonia.jpg" alt="Cerimônia montada sobre a água no Porto a Porto Restaurante">
+      </figure>
+
+      <div class="local-info">
+        <p class="local-nome">Porto a Porto Restaurante</p>
+        <p class="local-end">Ribeirão da Ilha &middot; Florianópolis — Santa Catarina</p>
+        <p class="local-nota">Há estacionamento ao lado e em frente ao restaurante.</p>
+
+        <a class="btn btn--contorno" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Porto%20a%20Porto%20Restaurante%2C%20Ribeir%C3%A3o%20da%20Ilha%2C%20Florian%C3%B3polis%20-%20SC">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+          Abrir no mapa
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ TRAJE ============ -->
+  <section class="bloco bloco--traje">
+    <span class="flor-sec flor-sec--br" aria-hidden="true"></span>
+
+    <div class="limite limite--estreito">
+      <p class="eyebrow">Traje</p>
+      <h2 class="titulo-script">Esporte chique</h2>
+
+      <p class="texto">
+        Pedimos apenas que a paleta de cores não seja de encontro com a dos noivos.
+        Prefira tons suaves e tecidos leves.
+      </p>
+
+      <div class="paleta" aria-hidden="true">
+        <span style="--c:#F7C6D9"></span>
+        <span style="--c:#E98BAE"></span>
+        <span style="--c:#B9A7D9"></span>
+        <span style="--c:#BFDCC8"></span>
+        <span style="--c:#B9DDF2"></span>
+        <span style="--c:#F8E6A5"></span>
+        <span style="--c:#F4B183"></span>
+      </div>
+
+      <p class="paleta-nota">Algumas cores sugeridas</p>
+    </div>
+  </section>
+
+
+  <!-- ============ PRESENTES ============ -->
+  <section class="bloco bloco--presentes">
+    <div class="limite limite--estreito">
+      <p class="eyebrow">Presentes</p>
+      <h2 class="titulo-script">Sua presença é o maior presente</h2>
+
+      <p class="texto">
+        Em breve enviaremos nossa lista de presentes. Se preferir, é só nos chamar
+        que conversamos com carinho.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============ RSVP ============ -->
+  <section class="bloco bloco--rsvp" id="rsvp">
+    <span class="flor-sec flor-sec--tr" aria-hidden="true"></span>
+
+    <div class="limite limite--estreito">
+      <p class="eyebrow">Confirmação de presença</p>
+      <h2 class="titulo-script">Será uma alegria ter você</h2>
+      <p class="texto texto--apoio">
+        Para prepararmos tudo com cuidado, pedimos a gentileza de confirmar
+        sua presença até <strong>24 de Outubro de 2026</strong>.
+      </p>
+
+      <form class="form" id="formRsvp" novalidate>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Preencha seu nome completo" required>
+        </div>
+
+        <div class="campo-duplo">
+          <div class="campo">
+            <label for="acompanhantes">Acompanhantes</label>
+            <input type="number" id="acompanhantes" name="acompanhantes" min="0" max="10" value="0">
+          </div>
+          <div class="campo">
+            <label for="presenca">Você comparecerá?</label>
+            <select id="presenca" name="presenca">
+              <option value="Sim, estarei presente">Sim, estarei presente</option>
+              <option value="Não poderei comparecer">Não poderei comparecer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="campo" id="campoPratos">
+          <label>Escolha do prato principal <span class="opc">(um para cada pessoa)</span></label>
+          <div class="pratos" id="pratosLista"></div>
+        </div>
+
+        <div class="campo">
+          <label for="recado">Deixe uma mensagem aos noivos <span class="opc">(opcional)</span></label>
+          <textarea id="recado" name="recado" rows="4" placeholder="Um recado carinhoso..."></textarea>
+        </div>
+
+        <button class="btn btn--rosa btn--cheio" type="submit">Confirmar presença</button>
+      </form>
+
+      <p class="form-nota">Ao confirmar, abriremos o WhatsApp com a mensagem pronta para envio.</p>
+
+      <div class="contato">
+        <p>Dúvidas? Fale com os noivos:</p>
+        <div class="contato-acoes">
+          <a class="btn btn--rosa" id="waCamila" target="_blank" rel="noopener">Camila</a>
+          <a class="btn btn--menta" id="waWilliam" target="_blank" rel="noopener">William</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <div class="limite">
+      <p class="rodape-mono">C <span>&amp;</span> W</p>
+      <p class="rodape-nomes">Camila Cristina Goncalves &amp; William Prussak Macarini</p>
+      <p class="rodape-data">24 &middot; 11 &middot; 2026 — Ribeirão da Ilha, Florianópolis</p>
+
+      <blockquote class="rodape-versiculo">
+        Acima de tudo, porém, revistam-se do amor, que é o elo perfeito.
+        <cite>Colossenses 3:14</cite>
+      </blockquote>
+
+      <button class="btn btn--contorno btn--pequeno" id="btnRever" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z" fill="currentColor"/></svg>
+        Ver a abertura novamente
+      </button>
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
