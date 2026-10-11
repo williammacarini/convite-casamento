@@ -13,3 +13,15 @@ Thumbs.db
 
 # Dependências (não há build neste projeto, mas por segurança)
 node_modules/
+
+# Artefatos locais de revisao, fora da entrega do site
+floral/.local-review/
+floral/validar*.mjs
+floral/revisar-comparacao.mjs
+floral/validacao.json
+floral/originais.sha256.json
+floral/assets/*.png
+floral/previas/*
+!floral/previas/principal-celular.png
+!floral/previas/alternativo-celular.png
+!floral/previas/convite-celular.png
