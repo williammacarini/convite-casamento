@@ -60,12 +60,12 @@
      anterior terminou, sem sobreposição.
      ------------------------------------------------------- */
   var TEMPO = {
-    selo:   900,   // selo de cera quebra e cai
-    aba:    1700,  // aba do envelope levanta (rotação 3D)
-    pausa1: 400,   // respiro antes da carta sair
-    sair:   1600,  // carta desliza para fora e PARA
-    crescer:1900,  // só ao clicar: carta expande e toma a conta
-    final:  1000   // crossfade para o convite
+    selo:   420,   // selo de cera quebra e cai
+    aba:    820,   // aba do envelope levanta (rotação 3D)
+    pausa1: 180,   // respiro antes da carta sair
+    sair:   850,   // carta desliza para fora e PARA
+    crescer:850,   // só ao clicar: leve aproximação da carta
+    final:  650    // crossfade para o convite
   };
 
   /**
@@ -106,7 +106,7 @@
       letterCard.style.transition =
         'transform ' + TEMPO.sair + 'ms cubic-bezier(.34,.06,.2,1), ' +
         'opacity 700ms ease';
-      letterCard.style.transform = 'translateY(-52%) scale(1.06)';
+      letterCard.style.transform = 'translateY(-52%) scale(1)';
       letterCard.style.zIndex = '8';
     }, tSelo + TEMPO.aba + TEMPO.pausa1);
 
@@ -152,12 +152,13 @@
     envelopeStage.classList.add('is-revealing');
     envelopeStage.classList.remove('is-ready');
 
+    // Aproximação discreta: o suficiente para dar continuidade,
+    // sem distorcer o texto e sem demorar para o convite aparecer.
     letterCard.style.transition =
       'transform ' + TEMPO.crescer + 'ms cubic-bezier(.22,.61,.36,1), ' +
-      'opacity 700ms ease';
-    letterCard.style.transform = 'translateY(-4%) scale(1.62)';
+      'opacity 600ms ease';
+    letterCard.style.transform = 'translateY(-50%) scale(1.06)';
     letterCard.style.zIndex = '12';
-    envelopeScene.style.transform = 'scale(1.1)';
 
     setTimeout(revelarConvite, TEMPO.crescer + TEMPO.final);
   }

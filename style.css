@@ -631,8 +631,8 @@ button{ font:inherit; color:inherit; }
   transform-origin:top center;
   transform-style:preserve-3d;
   transform:rotateX(0deg);
-  /* Alinhado com TEMPO.aba no script.js (1700ms) */
-  transition:transform 1500ms cubic-bezier(.4,.05,.25,1);
+  /* Alinhado com TEMPO.aba no script.js (820ms) */
+  transition:transform 820ms cubic-bezier(.4,.05,.25,1);
 }
 .envelope.is-open .env-flap{
   /* Gira até ficar quase de perfil (-88°). Nessa angulação a
@@ -855,7 +855,7 @@ button{ font:inherit; color:inherit; }
   animation:none;
   transform:translateY(-58px) rotate(22deg) scale(.34);
   opacity:0;
-  transition:transform 900ms cubic-bezier(.4,.05,.3,1), opacity 700ms ease;
+  transition:transform 420ms cubic-bezier(.4,.05,.3,1), opacity 380ms ease;
 }
 .envelope.is-open .seal-glow,
 .envelope.is-open .seal-laurel{ opacity:0; transition:opacity .6s ease; }
