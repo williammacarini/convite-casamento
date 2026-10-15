@@ -127,22 +127,15 @@ html:not(.js) .filtros { display: none; }
 }
 .mimo:hover { transform: translateY(-3px); box-shadow: 0 14px 26px #58442a1f; }
 .mimo[data-categoria="comidas"] { border-top-color: var(--cat-comidas); }
-.mimo[data-categoria="viagens"] { border-top-color: var(--cat-viagens); }
 .mimo[data-categoria="casa"] { border-top-color: var(--cat-casa); }
 .mimo[data-categoria="brincadeiras"] { border-top-color: var(--cat-brincadeiras); }
-.mimo[data-categoria="romanticos"] { border-top-color: var(--cat-romanticos); }
-.mimo[data-categoria="premium"] { border-top-color: var(--cat-premium); }
-.mimo--premium { background: #fdf9ff; }
+.mimo[data-categoria="nosdois"] { border-top-color: var(--cat-romanticos); }
 .mimo-topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.mimo-icone { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; font-size: 25px; background: #f1e7d3; }
-.mimo-svg { width: 31px; height: 31px; fill: none; stroke: var(--green); stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
-.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.mimo-icone { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; font-size: 30px; line-height: 1; background: #f1e7d3; }
 .mimo-icone--comidas { background: #fbe4d2; }
-.mimo-icone--viagens { background: #dcecf7; }
 .mimo-icone--casa { background: #e3f0d8; }
 .mimo-icone--brincadeiras { background: #fdf0cd; }
-.mimo-icone--romanticos { background: #fbdde7; }
-.mimo-icone--premium { background: #e9e1f8; }
+.mimo-icone--nosdois { background: #fbdde7; }
 .mimo-selo {
   font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em;
   color: var(--rose); background: #fbe3ec; border: 1px solid #f0c3d3; border-radius: 999px; padding: 5px 10px;

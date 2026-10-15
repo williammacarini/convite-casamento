@@ -12,7 +12,7 @@ mensagem pronta. **Nenhum pagamento é processado aqui** e nenhum dado do convid
 
 | Arquivo | Para que serve |
 | --- | --- |
-| `index.html` | Os 35 presentes, a capa, os filtros e os textos, além do sprite de ilustrações. Cada presente é um `<article class="mimo">`. |
+| `index.html` | Os 19 presentes, a capa, os filtros e os textos. Cada presente é um `<article class="mimo">`. |
 | `style.css` | Identidade visual: papel de algodão, flores em aquarela e as cores do convite. |
 | `script.js` | **Configuração** (números, fecho da mensagem), filtros, busca e valor livre. |
 | `assets/qr-mimos.svg` | QR Code que aponta para esta página (gerado localmente). |
@@ -63,7 +63,7 @@ Cada presente é um bloco assim, dentro de `index.html`:
 
 ```html
 <article class="mimo" data-categoria="comidas" data-nome="Costela do Noivo" data-valor="180">
-  <div class="mimo-topo"><span class="mimo-icone mimo-icone--comidas" aria-hidden="true"><svg class="mimo-svg" aria-hidden="true" focusable="false"><use href="#ico-costela"></use></svg></span><span class="mimo-selo">Mais pedido</span></div>
+  <div class="mimo-topo"><span class="mimo-icone mimo-icone--comidas" aria-hidden="true">🥩</span><span class="mimo-selo">Mais pedido</span></div>
   <h3 class="mimo-nome">Costela do Noivo</h3>
   <p class="mimo-desc">Descrição engraçada e carinhosa.</p>
   <p class="mimo-valor">Valor sugerido <strong>R$ 180</strong></p>
@@ -81,11 +81,11 @@ Cada presente é um bloco assim, dentro de `index.html`:
 
 Regras rápidas:
 
-- `data-categoria`: `comidas`, `viagens`, `casa`, `brincadeiras`, `romanticos` ou `premium`.
+- `data-categoria`: `comidas`, `casa`, `brincadeiras` ou `nosdois`.
 - `data-valor`: número puro, sem pontos (o `R$` é escrito à mão no texto).
 - `data-favorito="sim"` cria o selo **Mais pedido** e entra no filtro ❤️.
-- `data-nome` precisa ser igual ao nome mostrado no `<h3>`: é ele que vai na mensagem e escolhe a ilustração.
-- A ilustração vem do sprite no topo do arquivo: o `<use href="#ico-...">` do card aponta para um `<symbol id="ico-...">`. Para trocar o desenho de um presente, mude o `href` do card ou o conteúdo do símbolo (viewBox 0 0 64 64, traço de 2,3 na cor verde).
+- `data-nome` precisa ser igual ao nome mostrado no `<h3>`: é ele que vai na mensagem.
+- A figurinha de cada presente é um emoji dentro do `<span class="mimo-icone">`. Para trocar, é só substituir o caractere; para mudar a cor do círculo, use a classe da categoria (`mimo-icone--comidas`, `--casa`, `--brincadeiras`, `--nosdois`).
 - O `id` do campo de valor precisa ser único na página.
 - Depois de qualquer edição, rode `node ferramentas/preencher-links-mimos.mjs`.
 - O total de presentes aparece no texto da seção de filtros (procure por `id="totalMimos"`).
@@ -124,5 +124,5 @@ As prévias ficam em `presentes/previas/` (pasta local, fora do site publicado).
 2. **Número que recebe**: cada presente tem os dois botões (William e Camila), então o convidado escolhe.
 3. **Pix ou conta**: se quiserem facilitar a contribuição, é só informar a chave para colocarmos
    um texto na página. Nada foi inventado aqui.
-4. **Valores**: as faixas atuais vão de R$ 20 a R$ 500. Se quiserem limitar ou trocar algum mimo,
-   é uma linha por mimo.
+4. **Valores**: a lista atual vai de R$ 30 a R$ 1.200. Para trocar o valor de um presente, mude o
+   `data-valor` e o texto do `mimo-valor` no mesmo card e rode `node ferramentas/preencher-links-mimos.mjs`.
