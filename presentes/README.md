@@ -12,7 +12,7 @@ mensagem pronta. **Nenhum pagamento é processado aqui** e nenhum dado do convid
 
 | Arquivo | Para que serve |
 | --- | --- |
-| `index.html` | Os 21 presentes, a capa, os filtros e os textos. Cada presente é um `<article class="mimo">`. |
+| `index.html` | Os 26 presentes, a capa, os filtros e os textos. Cada presente é um `<article class="mimo">`. |
 | `style.css` | Identidade visual: papel de algodão, flores em aquarela e as cores do convite. |
 | `script.js` | **Configuração** (números, fecho da mensagem), filtros, busca e valor livre. |
 | `assets/qr-mimos.svg` | QR Code que aponta para esta página (gerado localmente). |
@@ -87,7 +87,7 @@ Regras rápidas:
 - `data-nome` precisa ser igual ao nome mostrado no `<h3>`: é ele que vai na mensagem.
 - Cada presente tem uma figurinha em 3D do conjunto aberto **Fluent Emoji (Microsoft, licença MIT)**, guardada localmente em `assets/stickers/*.png`. O card chama `<img class="mimo-sticker" src="assets/stickers/nome.png">`. Para trocar, substitua o arquivo `nome.png` (ou aponte o `src` para outro). A atribuição está em `assets/stickers/LICENCA.txt`.
 
-Figurinhas (todas enviadas pelos noivos, em `assets/stickers/*.jpg` ou `*.png`, até 512 px):
+Figurinhas (enviadas pelos noivos ou provisórias do conjunto Fluent Emoji, em `assets/stickers/`):
 
 | Arquivo | Presente |
 | --- | --- |
@@ -112,6 +112,11 @@ Figurinhas (todas enviadas pelos noivos, em `assets/stickers/*.jpg` ou `*.png`, 
 | `rico.jpg` | Você quer mostrar que é rico e a gente quer ver |
 | `nada.jpg` | Só para dizer que não dei nada |
 | `cartao.jpg` | Ajude a pagar nosso cartão |
+| `marykay.png` | Kit Mary Kay para a Noiva |
+| `estomazil.png` | Kit Estomazil dos Noivos |
+| `tenis.png` | Tênis para o Noivo |
+| `pitaco.png` | Dar Pitaco e Falar Mal da Festa |
+| `shein.png` | Compras Shein, Shopee e Mercado Livre |
 
 Os personagens de meme que vocês citaram (Homer, Bob Esponja, Nazaré, Seu Madruga, John Travolta) são protegidos por direitos autorais e não podem ir para um site público. As figurinhas acima são as reações equivalentes, de um conjunto aberto.
 - O `id` do campo de valor precisa ser único na página.
