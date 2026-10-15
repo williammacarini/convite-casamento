@@ -1,5 +1,5 @@
-Figurinhas desta pasta: Twemoji (Twitter Emoji), projeto jdecked/twemoji.
-Licença: Creative Commons Atribuição 4.0 (CC-BY 4.0).
-Fonte dos arquivos: https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/
-Nenhuma modificação foi feita nos desenhos; apenas renomeados para uso local.
-Créditos e licença completos: https://github.com/jdecked/twemoji
+Figurinhas desta pasta: Fluent Emoji (Microsoft), renderizações 3D.
+Licença: MIT.
+Fonte dos arquivos: https://github.com/microsoft/fluentui-emoji (via cdn.jsdelivr.net).
+Nenhuma modificação foi feita nas imagens; apenas renomeadas para uso local.
+Créditos e licença: https://github.com/microsoft/fluentui-emoji
