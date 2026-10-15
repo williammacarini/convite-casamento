@@ -1,0 +1,5 @@
+Figurinhas desta pasta: Twemoji (Twitter Emoji), projeto jdecked/twemoji.
+Licença: Creative Commons Atribuição 4.0 (CC-BY 4.0).
+Fonte dos arquivos: https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/
+Nenhuma modificação foi feita nos desenhos; apenas renomeados para uso local.
+Créditos e licença completos: https://github.com/jdecked/twemoji

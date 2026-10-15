@@ -85,7 +85,7 @@ Regras rápidas:
 - `data-valor`: número puro, sem pontos (o `R$` é escrito à mão no texto).
 - `data-favorito="sim"` cria o selo **Mais pedido** e entra no filtro ❤️.
 - `data-nome` precisa ser igual ao nome mostrado no `<h3>`: é ele que vai na mensagem.
-- Cada presente tem um adesivo desenhado à mão em SVG (estilo figurinha de WhatsApp: contorno grosso, cores do convite e carinha), dentro do `<span class="mimo-icone">`. O desenho fica no sprite no topo do arquivo (`<symbol id="fig-...">`, viewBox 0 0 96 96) e o card chama com `<use href="#fig-...">`. Para trocar: mude o `href` do card ou edite o símbolo.
+- Cada presente tem uma figurinha (emoji do conjunto **Twemoji**, licença CC-BY 4.0) guardada localmente em `assets/stickers/`. O card chama `<img class="mimo-sticker" src="assets/stickers/nome.svg">`. Para trocar a figura, basta substituir o arquivo `nome.svg` (ou apontar o `src` para outro arquivo). A atribuição está em `assets/stickers/LICENCA.txt`.
 - O `id` do campo de valor precisa ser único na página.
 - Depois de qualquer edição, rode `node ferramentas/preencher-links-mimos.mjs`.
 - O total de presentes aparece no texto da seção de filtros (procure por `id="totalMimos"`).

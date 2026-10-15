@@ -132,7 +132,7 @@ html:not(.js) .filtros { display: none; }
 .mimo[data-categoria="nosdois"] { border-top-color: var(--cat-romanticos); }
 .mimo-topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .mimo-icone { width: 68px; height: 68px; display: grid; place-items: center; }
-.mimo-sticker { width: 68px; height: 68px; filter: drop-shadow(0 3px 4px #4b3b3033); }
+.mimo-sticker { width: 68px; height: 68px; }
 .mimo-selo {
   font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em;
   color: var(--rose); background: #fbe3ec; border: 1px solid #f0c3d3; border-radius: 999px; padding: 5px 10px;
