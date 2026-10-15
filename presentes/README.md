@@ -86,6 +86,32 @@ Regras rápidas:
 - `data-favorito="sim"` cria o selo **Mais pedido** e entra no filtro ❤️.
 - `data-nome` precisa ser igual ao nome mostrado no `<h3>`: é ele que vai na mensagem.
 - Cada presente tem uma figurinha em 3D do conjunto aberto **Fluent Emoji (Microsoft, licença MIT)**, guardada localmente em `assets/stickers/*.png`. O card chama `<img class="mimo-sticker" src="assets/stickers/nome.png">`. Para trocar, substitua o arquivo `nome.png` (ou aponte o `src` para outro). A atribuição está em `assets/stickers/LICENCA.txt`.
+
+Figurinha de cada presente (arquivo → imagem):
+
+| Arquivo | Presente | Figurinha |
+| --- | --- | --- |
+| `costela.png` | Costela do Noivo | carinha babando |
+| `bolo.png` | Primeira Fatia do Bolo | olhos de cobiça |
+| `planta.png` | Planta da Varanda | flor murcha |
+| `batom.png` | Fundo Emergencial da Noiva | carinha de "silêncio" |
+| `churrasco.png` | Fundo do Churrasco | caminhão de bombeiros |
+| `playlist.png` | Playlist do Nosso Amor | dançarino |
+| `masterchef.png` | William MasterChef | cozinheiro |
+| `mounjaro.png` | Mounjaro para os Noivos | balança |
+| `seguro.png` | Seguro para o carro da Noiva | carinha gritando |
+| `terapia.png` | Terapia para os Noivos | cabeça explodindo |
+| `bagagem.png` | Taxa de Bagagem | mala |
+| `fitness.png` | Fitness | musculação |
+| `sentar.png` | Sentar ao lado dos noivos | coroa |
+| `calmantes.png` | Calmantes para o dia do Casamento | carinha com olhos em espiral |
+| `buque.png` | Jogar o buquê em sua direção | alvo |
+| `bola.png` | Bola de cristal | ombros dando de ombros |
+| `rico.png` | Você quer mostrar que é rico | carinha com cifrões |
+| `nada.png` | Só para dizer que não dei nada | dedos medindo pouquinho |
+| `cartao.png` | Ajude a pagar nosso cartão | carinha chorando |
+
+Os personagens de meme que vocês citaram (Homer, Bob Esponja, Nazaré, Seu Madruga, John Travolta) são protegidos por direitos autorais e não podem ir para um site público. As figurinhas acima são as reações equivalentes, de um conjunto aberto.
 - O `id` do campo de valor precisa ser único na página.
 - Depois de qualquer edição, rode `node ferramentas/preencher-links-mimos.mjs`.
 - O total de presentes aparece no texto da seção de filtros (procure por `id="totalMimos"`).
