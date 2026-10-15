@@ -12,7 +12,7 @@ mensagem pronta. **Nenhum pagamento é processado aqui** e nenhum dado do convid
 
 | Arquivo | Para que serve |
 | --- | --- |
-| `index.html` | Os 20 presentes, a capa, os filtros e os textos. Cada presente é um `<article class="mimo">`. |
+| `index.html` | Os 21 presentes, a capa, os filtros e os textos. Cada presente é um `<article class="mimo">`. |
 | `style.css` | Identidade visual: papel de algodão, flores em aquarela e as cores do convite. |
 | `script.js` | **Configuração** (números, fecho da mensagem), filtros, busca e valor livre. |
 | `assets/qr-mimos.svg` | QR Code que aponta para esta página (gerado localmente). |
@@ -111,6 +111,7 @@ Figurinha de cada presente (arquivo → imagem):
 | `nada.png` | Só para dizer que não dei nada | dedos medindo pouquinho |
 | `cartao.png` | Ajude a pagar nosso cartão | carinha chorando |
 | `docinhos.png` | Kit docinhos do casamento | bala |
+| `cafe.png` | Café do Noivo | xícara de café |
 
 Os personagens de meme que vocês citaram (Homer, Bob Esponja, Nazaré, Seu Madruga, John Travolta) são protegidos por direitos autorais e não podem ir para um site público. As figurinhas acima são as reações equivalentes, de um conjunto aberto.
 - O `id` do campo de valor precisa ser único na página.

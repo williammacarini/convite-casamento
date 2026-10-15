@@ -56,7 +56,7 @@
     <div class="wrap">
       <h2 class="secao-titulo">Escolha o seu presente</h2>
       <p class="secao-sub">
-        São <strong id="totalMimos">20</strong> ideias divididas em quatro categorias. Toque em uma
+        São <strong id="totalMimos">21</strong> ideias divididas em quatro categorias. Toque em uma
         categoria para filtrar, ou use a busca se já sabe o que procura.
       </p>
 
@@ -74,7 +74,7 @@
         <button class="chip chip--favorito" type="button" data-filtro="favoritos" aria-pressed="false">❤️ Mais pedidos</button>
       </div>
 
-      <p class="filtros-status" id="filtrosStatus" role="status" aria-live="polite">Mostrando os 20 presentes.</p>
+      <p class="filtros-status" id="filtrosStatus" role="status" aria-live="polite">Mostrando os 21 presentes.</p>
     </div>
   </section>
 
@@ -175,6 +175,22 @@
           <div class="mimo-campo" hidden>
             <label for="valor-docinhos">Seu valor (R$) <span>opcional, é só uma sugestão</span></label>
             <input type="number" id="valor-docinhos" min="1" step="5" inputmode="numeric" placeholder="80">
+          </div>
+        </article>
+
+        <article class="mimo" data-categoria="comidas" data-nome="Café do Noivo" data-valor="40">
+          <div class="mimo-topo"><span class="mimo-icone" aria-hidden="true"><img class="mimo-sticker" src="assets/stickers/cafe.png" alt="" width="68" height="68"></span></div>
+          <h3 class="mimo-nome">Café do Noivo</h3>
+          <p class="mimo-desc">Ajude o noivo a ficar acordado contribuindo para o café.</p>
+          <p class="mimo-valor">Valor sugerido <strong>R$ 40</strong></p>
+          <div class="mimo-acoes">
+            <a class="btn btn--mimo" data-wa data-destino="william" href="https://wa.me/5547999334946?text=Oi%2C%20noivos!%20Quero%20presentear%20voc%C3%AAs%20com%20*Caf%C3%A9%20do%20Noivo*%2C%20no%20valor%20sugerido%20de%20R%24%2040.%20Que%20essa%20nova%20fase%20seja%20cheia%20de%20amor%2C%20felicidade%20e%20muitas%20hist%C3%B3rias%20boas!%20%E2%9D%A4%EF%B8%8F">Chamar o William</a>
+            <a class="btn btn--mimo-alt" data-wa data-destino="camila" href="https://wa.me/5547992769491?text=Oi%2C%20noivos!%20Quero%20presentear%20voc%C3%AAs%20com%20*Caf%C3%A9%20do%20Noivo*%2C%20no%20valor%20sugerido%20de%20R%24%2040.%20Que%20essa%20nova%20fase%20seja%20cheia%20de%20amor%2C%20felicidade%20e%20muitas%20hist%C3%B3rias%20boas!%20%E2%9D%A4%EF%B8%8F">Chamar a Camila</a>
+            <button class="btn btn--texto mimo-outro" type="button" aria-expanded="false">Quero dar outro valor</button>
+          </div>
+          <div class="mimo-campo" hidden>
+            <label for="valor-cafe-do-noivo">Seu valor (R$) <span>opcional, é só uma sugestão</span></label>
+            <input type="number" id="valor-cafe-do-noivo" min="1" step="5" inputmode="numeric" placeholder="40">
           </div>
         </article>
 
