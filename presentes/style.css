@@ -133,6 +133,10 @@ html:not(.js) .filtros { display: none; }
 .mimo-topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .mimo-icone { width: 68px; height: 68px; display: grid; place-items: center; }
 .mimo-sticker { width: 68px; height: 68px; }
+/* Presentes com foto enviada pelos noivos: imagem grande, estilo banner */
+.mimo--foto .mimo-topo { align-items: flex-start; }
+.mimo--foto .mimo-icone { width: 100%; height: auto; aspect-ratio: 4 / 3; display: block; border-radius: 12px; overflow: hidden; background: #f1e7d3; }
+.mimo--foto .mimo-sticker { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
 .mimo-selo {
   font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em;
   color: var(--rose); background: #fbe3ec; border: 1px solid #f0c3d3; border-radius: 999px; padding: 5px 10px;
