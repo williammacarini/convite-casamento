@@ -134,9 +134,11 @@ html:not(.js) .filtros { display: none; }
 .mimo-icone { width: 68px; height: 68px; display: grid; place-items: center; }
 .mimo-sticker { width: 68px; height: 68px; }
 /* Presentes com foto enviada pelos noivos: imagem grande, estilo banner */
-.mimo--foto .mimo-topo { align-items: flex-start; }
-.mimo--foto .mimo-icone { width: 100%; height: auto; aspect-ratio: 4 / 3; display: block; border-radius: 12px; overflow: hidden; background: #f1e7d3; }
+.mimo--foto .mimo-topo { display: block; position: relative; }
+.mimo--foto .mimo-selo { position: absolute; top: 10px; right: 10px; z-index: 2; background: #fffaf1f2; }
+.mimo--foto .mimo-icone { width: 100%; height: auto; aspect-ratio: 1 / 1; display: block; border-radius: 12px; overflow: hidden; background: #f1e7d3; }
 .mimo--foto .mimo-sticker { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+@media (min-width: 700px) { .mimo--foto { grid-column: span 2; } }
 .mimo-selo {
   font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em;
   color: var(--rose); background: #fbe3ec; border: 1px solid #f0c3d3; border-radius: 999px; padding: 5px 10px;
