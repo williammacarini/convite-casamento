@@ -87,7 +87,7 @@ Regras rápidas:
 - `data-nome` precisa ser igual ao nome mostrado no `<h3>`: é ele que vai na mensagem.
 - Cada presente tem uma figurinha em 3D do conjunto aberto **Fluent Emoji (Microsoft, licença MIT)**, guardada localmente em `assets/stickers/*.png`. O card chama `<img class="mimo-sticker" src="assets/stickers/nome.png">`. Para trocar, substitua o arquivo `nome.png` (ou aponte o `src` para outro). A atribuição está em `assets/stickers/LICENCA.txt`.
 
-Figurinhas (enviadas pelos noivos ou provisórias do conjunto Fluent Emoji, em `assets/stickers/`):
+Figurinhas (todas enviadas pelos noivos, em `assets/stickers/`, até 512 px, marca d'água removida quando existia):
 
 | Arquivo | Presente |
 | --- | --- |
@@ -112,11 +112,11 @@ Figurinhas (enviadas pelos noivos ou provisórias do conjunto Fluent Emoji, em `
 | `rico.jpg` | Você quer mostrar que é rico e a gente quer ver |
 | `nada.jpg` | Só para dizer que não dei nada |
 | `cartao.jpg` | Ajude a pagar nosso cartão |
-| `marykay.png` | Kit Mary Kay para a Noiva |
-| `estomazil.png` | Kit Estomazil dos Noivos |
-| `tenis.png` | Tênis para o Noivo |
-| `pitaco.png` | Dar Pitaco e Falar Mal da Festa |
-| `shein.png` | Compras Shein, Shopee e Mercado Livre |
+| `marykay.jpg` | Kit Mary Kay para a Noiva |
+| `estomazil.jpg` | Kit Estomazil dos Noivos |
+| `tenis.jpg` | Tênis para o Noivo |
+| `pitaco.jpg` | Dar Pitaco e Falar Mal da Festa |
+| `shein.jpg` | Compras Shein, Shopee e Mercado Livre |
 
 Os personagens de meme que vocês citaram (Homer, Bob Esponja, Nazaré, Seu Madruga, John Travolta) são protegidos por direitos autorais e não podem ir para um site público. As figurinhas acima são as reações equivalentes, de um conjunto aberto.
 - O `id` do campo de valor precisa ser único na página.
