@@ -16,7 +16,8 @@
     pratos: [
       'Risoto Bruxaria',
       'Parmegiana de mignon',
-      'Parmegiana de frango'
+      'Parmegiana de frango',
+      'Menu Kids (feito no dia)'
     ],
     // WhatsApp dos noivos: código do país + DDD + número, apenas dígitos
     whatsWilliam: '5547999334946',
