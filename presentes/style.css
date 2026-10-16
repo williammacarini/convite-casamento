@@ -80,6 +80,11 @@ ol, ul { padding: 0; list-style: none; }
 .hero-texto { font-family: var(--serif); font-size: 19px; line-height: 1.75; margin-top: 22px; }
 .hero-texto--destaque { font-style: italic; color: var(--rose); font-size: 18px; margin-top: 12px; }
 
+.lembrete-topo {
+  margin-top: 22px; font-size: 12px; line-height: 1.85; color: #8c2348;
+  background: #fbe3ec; border: 1px solid #f0c3d3; border-radius: 12px; padding: 13px 18px;
+}
+.lembrete-topo strong { color: var(--rose); }
 .passos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 34px; text-align: left; }
 .passos li { display: grid; gap: 4px; background: #fffdf8; border: 1px solid #e6dcc6; border-radius: 12px; padding: 18px 18px 20px; font-size: 12px; line-height: 1.7; }
 .passo-num {
